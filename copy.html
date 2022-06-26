@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{width: 1220px; margin: 0 auto; margin-top: 25px;  display: flex; justify-content: space-between;}
+        /*header*/
+        header>div{width: 50px; height: 5px;}
+        #logoimg{width: 253.32px; height: 56.82px;}
+        #mypagelogo{width: 50px; height: 50px; margin-top: 4px;}
+        /*section*/
+        section{width: 1220px; margin: 0 auto;}
+        section>h1{ font-size: 2.3rem; font-weight: bold; color: #373F57; margin-top: 30px;}
+        /* 신입 or 경력 탭 */
+        .tab_member_type{list-style: none;}
+        .t_per a{ width: 80px; height: 40px; text-decoration: none; 
+                display: flex; float: left; margin-left: -32px; margin-right: 25px;
+                background-color: #F0F0F0; color: #858585; justify-content: center;
+                align-items: center; border-radius: 10px; font-size: 1rem; font-weight: bold;}
+        .t_per a:hover{background-color: #A5E374; color: white;}        
+        .t_com a{ width: 80px; height: 40px; text-decoration: none;
+                display: flex; background-color: #F0F0F0; border-radius: 10px;
+                color: #858585; justify-content: center; align-items: center;
+                margin-top: 20px; font-size: 1rem; font-weight: bold;}
+        .t_com a:hover{background-color: #A5E374; color: white;}
+        /* 이력서 제목 */
+        .titlebox{width: 1220px; height: 80px; border: 2px solid #A5E374; display: flex; justify-content: center;
+            align-items: center;}
+        #title{width: 1200px; height: 60px; font-size: 2rem; font-weight: bold; color: #373F57;
+            border: none; outline: unset;}
+        /*내 정보*/
+        #myinfobox{width: 1220px; height: 290px; background-color: #F8F8F8; }
+        /*증명사진*/
+        #photobox{width: 95px; height: 150px; position: relative; left: 26px; top: 30px;}
+        #attachmentsbox{width: 94px; height: 113px; background-color: white; border: 1px solid #858585;}
+        #photobox>div>img{width: 94px; height: 113px;}
+        #atbox>a{text-align: center; text-decoration: none; align-content: center;}
+        #atbox{width: 94px; display: flex; justify-content: center; margin-top: 10px;}
+        #attachments{width: 80px; height: 25px; background-color: #A5E374; color: white; border-radius: 10px;}
+        /*inputbox*/
+        #inputbox{width: 350px; margin-left: 155px; margin-top: -120px;}
+        .infoForm{float: right; width: 250px; outline: unset;}
+        /*footer*/
+        footer{width: auto; height: 240px; background-color: #A5E374; justify-content: center;
+            color: white; font-size: 3rem; margin-top: 60vh; display: flex; align-items: center;}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/이력서 작성.js"></script>
+</head>
+<body onresize="update_screen_size()">
+    <header>
+        <div></div>
+        <a href="mainpage.html"><img src="img/logo (2).png" alt="logoimg" id="logoimg"></a>
+        <a href="#"><img src="img/Group 57.png" alt="mypagelogo" id="mypagelogo"></a>
+    </header>
+    <section>
+        <ul class="tab_member_type">
+            <li class="t_per t_on"><a href="##">신입</a></li>
+            <li class="t_com"><a href="##">경력</a></li>
+        </ul>
+        <h1>이력서 제목</h1>
+        <div class="titlebox">
+            <input type="text" id="title" placeholder="이력서 제목을 입력 하세요.">
+        </div>
+        <h1>내 정보</h1>
+        <article id="myinfobox">
+            <div id="photobox">
+                <div id="attachmentsbox"><img src="img/default첨부파일.png" alt=""></div>
+                <div id="atbox">
+                    <a href="#"><div id="attachments">증명사진</div></a>
+                </div>
+            </div>
+                <div id="inputbox">
+                    <form action="#">
+                        <p>이름<input type="text" name="name" id="name" class="infoForm" placeholder="이름을 입력하세요"></p>
+                        <p>생년월일<input type="date" name="bday" id="bday" class="infoForm" ></p>
+                        <p>이메일<input type="email" name="email" id="email" class="infoForm" placeholder="이메일을 입력하세요"></p>
+                        <p>휴대폰<input type="text" name="tel" id="tel" class="infoForm" placeholder="휴대전화 번호를 입력하세요"></p>
+                        <p>주소<input type="text" name="address" id="address" class="infoForm" placeholder="현재 거주중인 주소를 입력하세요"></p>
+                        <p>상세주소<input type="text" name="deepaddress" id="deepaddress" class="infoForm" placeholder="동호수까지 입력 하세요"></p>
+                    </form>
+                </div>
+        </article>
+    </section>
+    <footer>
+        <div id="footerbox">footer</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
